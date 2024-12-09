@@ -23,6 +23,7 @@ To run the application, you need Python 3.x and Docker installed on your machine
 - SQLite3 (for database management)
 - pandas (for data handling)
 - numpy (for numerical operations)
+- pytest (for unit testing)
 
 ### Installation Steps
 
@@ -42,7 +43,7 @@ To run the application, you need Python 3.x and Docker installed on your machine
 
     ```bash
     python -m venv env
-    source env/bin/activate  # On Windows use 'env\\Scripts\\activate'
+    source env/bin/activate  # On Windows use '.env\Scriptsctivate'
     ```
 
 4. Install the required dependencies:
@@ -61,7 +62,10 @@ To run the application, you need Python 3.x and Docker installed on your machine
 
 ### Database Setup
 
-The application uses SQLite to store data. The database will be created automatically when the application runs for the first time. However, you can manage and query the database using SQLite tools or command-line interface.
+The application uses SQLite to store data. The database (`ice_cream_parlor.db`) will be created automatically when the application runs for the first time. You can inspect or manage the database by:
+
+1. Using SQLite tools (e.g., DB Browser for SQLite) to open `ice_cream_parlor.db`.
+2. Running queries through the SQLite command line interface.
 
 ### Running the Application with Docker
 
@@ -83,7 +87,41 @@ To run the application in a Docker container, follow these steps:
 
 ## Testing
 
-The application includes basic unit tests to verify the functionality of core features like adding items to the cart and filtering flavors. To run the tests, use the following command:
+The application includes basic unit tests to verify the functionality of core features like adding items to the cart, removing items, and interacting with the database.
+
+To run the tests, use the following command:
 
 ```bash
+pip install pytest  # If pytest is not already installed
 pytest
+```
+
+You can find the test files in the `tests/` folder. These tests cover core functionality such as:
+- Adding items to the cart
+- Removing items from the cart
+- Interacting with the database (e.g., adding and retrieving flavors)
+
+## Documentation of Code
+
+The code is documented with comments to explain the purpose and logic behind the key functions. Each function and module has docstrings to enhance readability and maintainability.
+
+## Docker Instructions
+
+The project includes a `Dockerfile` to build a Docker container for the application. Follow the instructions above to build and run the application within Docker.
+
+### Docker Build:
+
+```bash
+docker build -t ice-cream-parlor-app .
+```
+
+### Docker Run:
+
+```bash
+docker run -p 8501:8501 ice-cream-parlor-app
+```
+
+## Final Notes
+
+- The project is built to be portable, meaning it should run on any machine as long as the instructions in the README are followed correctly.
+- Please do not reuse code from external sources. All code is original and written specifically for this project.
