@@ -121,7 +121,3 @@ docker build -t ice-cream-parlor-app .
 docker run -p 8501:8501 ice-cream-parlor-app
 ```
 
-## Final Notes
-
-- The project is built to be portable, meaning it should run on any machine as long as the instructions in the README are followed correctly.
-- Please do not reuse code from external sources. All code is original and written specifically for this project.
