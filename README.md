@@ -96,7 +96,7 @@ pip install pytest  # If pytest is not already installed
 pytest
 ```
 
-You can find the test files in the `tests/` folder. These tests cover core functionality such as:
+You can find the test files in the `test/` folder. These tests cover core functionality such as:
 - Adding items to the cart
 - Removing items from the cart
 - Interacting with the database (e.g., adding and retrieving flavors)
