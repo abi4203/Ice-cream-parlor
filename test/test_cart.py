@@ -1,5 +1,5 @@
 import pytest
-from app import Cart, Flavor  # Adjust imports based on your application structure
+from app import Cart, Flavor  
 
 @pytest.fixture
 def setup_cart():
@@ -31,11 +31,11 @@ def test_cart_total(setup_cart):
     setup_cart.add_item(flavor2)
     
     total = setup_cart.get_total()
-    assert total == 9  # 5 + 4
+    assert total == 9  
 
 def test_flavor_exists_in_database(setup_cart):
     """Test interacting with the database to check if flavor exists"""
     flavor = Flavor(name="Strawberry", price=6)
-    # Assuming you have a method to add to DB and a method to check if it exists
+    
     setup_cart.db.add_flavor(flavor)
     assert setup_cart.db.flavor_exists(flavor) is True
