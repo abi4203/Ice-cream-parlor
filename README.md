@@ -29,13 +29,13 @@ To run the application, you need Python 3.x and Docker installed on your machine
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/yourusername/ice-cream-parlor-app.git
+    git clone https://github.com/yourusername/ice-cream-parlor.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd ice-cream-parlor-app
+    cd ice-cream-parlor
     ```
 
 3. Create and activate a Python virtual environment:
