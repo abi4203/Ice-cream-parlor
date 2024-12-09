@@ -43,7 +43,7 @@ To run the application, you need Python 3.x and Docker installed on your machine
 
     ```bash
     python -m venv env
-    source env/bin/activate  # On Windows use '.env\Scriptsctivate'
+    source env/bin/activate  # On Windows use '.env\Scripts\activate'
     ```
 
 4. Install the required dependencies:
